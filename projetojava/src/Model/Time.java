@@ -52,3 +52,12 @@ public class Time extends EntidadeBase {
 //List<String> lista = t.getJogadores();
 
 //System.out.println(lista);
+
+//exemplo para deixar mais fácil de entender o puxe:
+//Time t = new Time(1, "Furacão das galaxias");
+//t.adicionarJogador("Fernandinho the best");
+//t.adicionarJogador("Vitor Roque the greatest");
+
+//List<String> lista = t.getJogadores();
+
+//System.out.println(lista);
