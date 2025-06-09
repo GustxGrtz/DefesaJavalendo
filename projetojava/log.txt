@@ -1,0 +1,3 @@
+2025-06-08T23:08:23.314152300 - Erro ao ler o arquivo texto: C:\Users\Gustavo\Documents\Coding\javaiDesistindo\defesa\github\projetojava\src (Acesso negado)
+2025-06-08T23:08:31.167940700 - Erro ao ler o arquivo texto: C:\Users\Gustavo\Documents\Coding\javaiDesistindo\defesa\github\projetojava\src (Acesso negado)
+2025-06-08T23:14:13.601166700 - Erro ao ler o arquivo texto: teste.txt (O sistema não pode encontrar o arquivo especificado)
