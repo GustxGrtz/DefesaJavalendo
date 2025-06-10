@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 public abstract class EntidadeBase {
     private int id;
@@ -9,8 +9,19 @@ public abstract class EntidadeBase {
         this.nome = nome;
     }
 
+    public abstract void exibirResumo();
+
+    @Override
+    public String toString() {
+        return "EntidadeBase [id=" + id + ", nome=" + nome + "]";
+    }
+
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -20,6 +31,4 @@ public abstract class EntidadeBase {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public abstract void exibirResumo();
 }
