@@ -1,7 +1,7 @@
-package view;
+package View;
 
-import controller.TimeController;
-import model.Time;
+import Controller.TimeController;
+import Model.Time;
 import java.util.List;
 import java.util.Scanner;
 

@@ -1,3 +1,15 @@
 2025-06-08T23:08:23.314152300 - Erro ao ler o arquivo texto: C:\Users\Gustavo\Documents\Coding\javaiDesistindo\defesa\github\projetojava\src (Acesso negado)
 2025-06-08T23:08:31.167940700 - Erro ao ler o arquivo texto: C:\Users\Gustavo\Documents\Coding\javaiDesistindo\defesa\github\projetojava\src (Acesso negado)
 2025-06-08T23:14:13.601166700 - Erro ao ler o arquivo texto: teste.txt (O sistema não pode encontrar o arquivo especificado)
+2025-06-10T22:58:48.030658900 - Objetos salvos com sucesso.
+2025-06-10T22:58:48.040660100 - Erro ao carregar objetos: Model.Time; no valid constructor
+2025-06-10T22:59:14.000946200 - Objetos salvos com sucesso.
+2025-06-10T22:59:14.012941300 - Erro ao carregar objetos: Model.Time; no valid constructor
+2025-06-10T23:06:03.865289600 - Objetos salvos com sucesso.
+2025-06-10T23:06:03.875808100 - Erro ao carregar objetos: Model.Time; no valid constructor
+2025-06-10T23:07:23.354899800 - Objetos salvos com sucesso.
+2025-06-10T23:07:23.368705200 - Objetos carregados com sucesso.
+2025-06-10T23:09:46.768143300 - Objetos salvos com sucesso.
+2025-06-10T23:09:46.781979600 - Objetos carregados com sucesso.
+2025-06-10T23:10:38.700196200 - Objetos salvos com sucesso.
+2025-06-10T23:10:38.713711600 - Objetos carregados com sucesso.

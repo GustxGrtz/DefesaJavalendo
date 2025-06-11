@@ -1,6 +1,6 @@
-package controller;
+package Controller;
 
-import model.Time;
+import Model.Time;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,8 +10,8 @@ public class TimeController {
 
     // Criar um time com nome
     public void criar(String nome) {
-        Time novoTime = new Time(proximoId, nome);
-        times.add(novoTime);
+        // Time novoTime = new Time(proximoId, nome); TIRAR COMENTARIO DEPOIS
+        // times.add(novoTime); TIRAR COMENTARIO DEPOIS
         proximoId++;
     }
 

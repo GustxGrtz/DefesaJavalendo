@@ -1,29 +1,12 @@
 package Controller;
 
 import Model.Log;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class Serializador {
-
-
- static File file = new File("teste.txt");
-
-// public static void lerArquivoTexto() {
-//     try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-//         String linha = br.readLine();
-//         while (linha != null) {
-//             System.out.println(linha);
-//             linha = br.readLine();
-//         }
-//     } catch(IOException e) {
-//         Log.registrar("Erro ao ler o arquivo texto: " + e.getMessage());
-//         throw new RuntimeException(e);
-//     }
-// }
 
 public static void salvarObjeto(String caminho, Object[] objetos) {
     try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(caminho))) {
