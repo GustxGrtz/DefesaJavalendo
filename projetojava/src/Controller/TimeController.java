@@ -10,8 +10,8 @@ public class TimeController {
 
     // Criar um time com nome
     public void criar(String nome) {
-        // Time novoTime = new Time(proximoId, nome); TIRAR COMENTARIO DEPOIS
-        // times.add(novoTime); TIRAR COMENTARIO DEPOIS
+        Time novoTime = new Time(proximoId, nome); 
+        times.add(novoTime);
         proximoId++;
     }
 
