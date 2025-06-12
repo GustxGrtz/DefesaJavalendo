@@ -1,7 +1,6 @@
 package View;
 
 import Controller.CampeonatoController;
-import Model.Campeonato;
 import java.util.Scanner;
 
 public class CampeonatoView {
@@ -30,13 +29,13 @@ public class CampeonatoView {
                     criarCampeonato(scan);
                     break;
                 case 2:
-                    controller.gerarChaveamento();
+                    gerarChaveamento();
                     break;
                 case 3:
-                    controller.mostrarJogos();
+                    mostrarJogos();
                     break;
                 case 4:
-                    controller.avancarFase();
+                    avancarFase();
                     break;
                 case 5:
                     menu = false;
@@ -51,8 +50,33 @@ public class CampeonatoView {
     private static void criarCampeonato(Scanner scan) {
         System.out.print("Digite o nome do campeonato: ");
         String nome = scan.nextLine();
-        Campeonato campeonato = new Campeonato(nome);
-        controller.setCampeonato(campeonato);
+        controller.criarCampeonato(nome);  // Método delegado para o controller
         System.out.println("Campeonato criado com sucesso!");
+    }
+
+    private static void gerarChaveamento() {
+        try {
+            controller.gerarChaveamento();
+            System.out.println("Chaveamento gerado com sucesso!");
+        } catch (NullPointerException e) {
+            System.out.println("Erro: Crie o campeonato antes de gerar o chaveamento.");
+        }
+    }
+
+    private static void mostrarJogos() {
+        try {
+            controller.mostrarJogos();
+        } catch (NullPointerException e) {
+            System.out.println("Erro: Nenhum campeonato encontrado. Crie um primeiro.");
+        }
+    }
+
+    private static void avancarFase() {
+        try {
+            controller.avancarFase();
+            System.out.println("Fase avançada com sucesso!");
+        } catch (NullPointerException e) {
+            System.out.println("Erro: Crie um campeonato com jogos antes de avançar a fase.");
+        }
     }
 }

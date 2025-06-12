@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class CampeonatoController {
+        private List<Campeonato> campeonatos = new ArrayList<>();
 
     private Campeonato campeonato;
 
@@ -60,5 +61,10 @@ public class CampeonatoController {
     public void setCampeonato(Campeonato campeonato) {
         this.campeonato = campeonato;
     }
+
+    public void criarCampeonato(Campeonato campeonato) {
+        campeonatos.add(campeonato);
+    }
+
 
 }
