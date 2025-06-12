@@ -10,7 +10,7 @@ public class TimeController {
 
     // Criar um time com nome
     public void criar(String nome) {
-        Time novoTime = new Time(proximoId, nome); 
+        Time novoTime = new Time(proximoId, nome, nome); 
         times.add(novoTime);
         proximoId++;
     }

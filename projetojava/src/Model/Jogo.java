@@ -5,9 +5,18 @@ import java.time.LocalDate;
 
 public class Jogo extends EntidadeBase implements Serializable {
 
-    public Jogo(int id, String nome) {
-        super(id, nome);
-    }
+// Construtor manual
+public Jogo(int id, String nome) {
+    super(id, nome);
+}
+
+// Construtor automático para chaveamento
+public Jogo(Time timeCasa, Time timeFora, LocalDate data) {
+    super(0, timeCasa.getNome() + " vs " + timeFora.getNome());
+    this.timeCasa = timeCasa;
+    this.timeFora = timeFora;
+    this.data = data;
+}
 
     private Time timeCasa;
     private Time timeFora;
