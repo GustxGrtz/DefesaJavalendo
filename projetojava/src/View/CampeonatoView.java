@@ -20,4 +20,8 @@ public class CampeonatoView {
     public void proximaFase() {
         controller.avancarFase();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 487112c210f6a9ad9201f63ae0f3ba31691ff895

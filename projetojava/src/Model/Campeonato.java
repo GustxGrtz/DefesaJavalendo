@@ -41,4 +41,8 @@ public class Campeonato extends EntidadeBase implements Serializable {
         System.out.println("Campeonato: " + nome);
         jogos.forEach(Jogo::exibirResumo);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 487112c210f6a9ad9201f63ae0f3ba31691ff895

@@ -1,6 +1,8 @@
 package Model;
 
-public abstract class EntidadeBase {
+import java.io.Serializable;
+
+public abstract class EntidadeBase implements Serializable{
     private int id;
     private String nome;
 

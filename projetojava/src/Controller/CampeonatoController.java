@@ -40,4 +40,8 @@ public class CampeonatoController {
     public Campeonato getCampeonato() {
         return campeonato;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 487112c210f6a9ad9201f63ae0f3ba31691ff895
