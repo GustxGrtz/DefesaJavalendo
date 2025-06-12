@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class CampeonatoView {
 
     private static CampeonatoController controller = new CampeonatoController();
+    private static Scanner scan = new Scanner(System.in);
 
     public static void menuCampeonatos() {
 
@@ -26,7 +27,7 @@ public class CampeonatoView {
 
             switch (op) {
                 case 1:
-                    criarCampeonato(scan);
+ //                   criarCampeonato();
                     break;
                 case 2:
                     gerarChaveamento();
@@ -47,12 +48,20 @@ public class CampeonatoView {
         } while (menu);
     }
 
-    private static void criarCampeonato(Scanner scan) {
-        System.out.print("Digite o nome do campeonato: ");
-        String nome = scan.nextLine();
-        controller.criarCampeonato(nome);  // Método delegado para o controller
-        System.out.println("Campeonato criado com sucesso!");
-    }
+    // private static void criarCampeonato() {
+    //     System.out.print("Nome do Campeonato ");
+    //     String nomeCasa = scan.nextLine();
+    //     System.out.print("Nome do time de fora: ");
+    //     String nomeFora = scan.nextLine();
+
+    //     Time timeCasa = new Time(0, nomeCasa, nomeCasa);
+    //     Time timeFora = new Time(0, nomeFora, nomeFora);
+
+    //     Jogo jogo = new Jogo(timeCasa, timeFora, LocalDate.now());
+    //     jogoController.adicionarJogo(jogo);
+
+    //     System.out.println("Jogo adicionado com sucesso!");
+    // }
 
     private static void gerarChaveamento() {
         try {
