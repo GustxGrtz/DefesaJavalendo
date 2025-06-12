@@ -19,17 +19,23 @@ public class MenuView {
             System.out.println("3 - Campeonato");
             System.out.println("4 - Sair");
             op = scan.nextInt();
-            
+
             switch (op) {
-                case 1 :
-                    System.out.println("teste");
+                case 1:
+                    System.out.println("------------Times-----------");
+                    break;
+                case 2:
+                    JogoView.menuJogos();
+                    break;
+                case 3:
+                    System.out.println("--------Campeonatos---------");
                     break;
                 case 4:
                     menu = false;
                 default:
                     throw new AssertionError();
             }
-            
+
         } while (menu == true);
 
     }
