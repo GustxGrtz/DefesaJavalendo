@@ -11,13 +11,13 @@ public class MenuView {
         int op;
 
         do {
-
             System.out.println("Bem vindo ao Gerenciador de Campeonatos");
             System.out.println("Menu Principal");
             System.out.println("1 - Times");
             System.out.println("2 - Jogos");
             System.out.println("3 - Campeonato");
             System.out.println("4 - Sair");
+            System.out.print("Escolha uma opção: ");
             op = scan.nextInt();
 
             switch (op) {
@@ -32,11 +32,13 @@ public class MenuView {
                     break;
                 case 4:
                     menu = false;
+                    System.out.println("Saindo do sistema...");
+                    break;
                 default:
-                    throw new AssertionError();
+                    System.out.println("Opção inválida. Tente novamente.");
+                    break;
             }
 
-        } while (menu == true);
-
+        } while (menu);
     }
 }
