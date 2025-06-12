@@ -56,7 +56,7 @@ public class JogoView {
         System.out.print("Nome do time de fora: ");
         String nomeFora = scan.nextLine();
 
-        Time timeCasa = new Time(0, nomeCasa, nomeFora);
+        Time timeCasa = new Time(0, nomeCasa, nomeCasa);
         Time timeFora = new Time(0, nomeFora, nomeFora);
 
         Jogo jogo = new Jogo(timeCasa, timeFora, LocalDate.now());

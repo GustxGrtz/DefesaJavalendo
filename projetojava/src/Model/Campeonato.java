@@ -7,8 +7,6 @@ public class Campeonato extends EntidadeBase {
 
     private static int id;
 
-
-
     public Campeonato(String nome) {
         super(id, nome);
     }
@@ -16,8 +14,6 @@ public class Campeonato extends EntidadeBase {
     private String nome;
     private List<Time> times = new ArrayList<>();
     private List<Jogo> jogos = new ArrayList<>();
-
-
 
     public void adicionarTime(Time time) {
         times.add(time);
@@ -41,4 +37,3 @@ public class Campeonato extends EntidadeBase {
         jogos.forEach(Jogo::exibirResumo);
     }
 }
-

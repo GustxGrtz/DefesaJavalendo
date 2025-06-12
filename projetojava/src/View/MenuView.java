@@ -28,7 +28,7 @@ public class MenuView {
                     JogoView.menuJogos();
                     break;
                 case 3:
-                    System.out.println("--------Campeonatos---------");
+                    CampeonatoView.menuCampeonatos();
                     break;
                 case 4:
                     menu = false;
