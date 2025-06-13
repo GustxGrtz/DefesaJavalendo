@@ -23,6 +23,7 @@ public class MenuView {
 
         do {
             try {
+                System.out.println("-------------------Menu--------------------");
                 System.out.println("Bem vindo ao Gerenciador de Campeonatos");
                 System.out.println("Menu Principal");
                 System.out.println("1 - Times");

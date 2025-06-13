@@ -1,2 +1,3 @@
 2025-06-12T12:30:07.296623925 - Objetos salvos com sucesso.
 2025-06-12T12:30:07.408388487 - Objetos carregados com sucesso.
+2025-06-13T19:18:42.135290990 - Erro ao carregar objetos: Model.Time; local class incompatible: stream classdesc serialVersionUID = 8711106240770413434, local class serialVersionUID = 2991159303425256412
