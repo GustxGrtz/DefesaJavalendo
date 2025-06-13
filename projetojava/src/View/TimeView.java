@@ -50,9 +50,12 @@ public class TimeView {
             System.out.println("Nenhum time cadastrado.");
             return;
         }
-        for (Time t : times) {
-            System.out.println("ID: " + t.getId() + " | Nome: " + t.getNome());
-        }
+       for (int i = 0; i < times.size(); i++) {
+        Time t = times.get(i);
+        System.out.println("ID: " + t.getId() + " | Nome: " + t.getNome());
+}
+
+}
     }
 
     private void adicionarJogador() {
