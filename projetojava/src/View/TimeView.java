@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TimeView {
-    private TimeController controller = new TimeController();
-    private Scanner scanner = new Scanner(System.in);
+    public TimeController controller = new TimeController();
+    public Scanner scanner = new Scanner(System.in);
 
     public void exibirMenu() {
         int opcao;
@@ -114,4 +114,3 @@ public class TimeView {
         }
     }
 }
-//teste time view 

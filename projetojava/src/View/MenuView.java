@@ -25,21 +25,25 @@ public class MenuView {
             try {
                 System.out.println("Bem vindo ao Gerenciador de Campeonatos");
                 System.out.println("Menu Principal");
-                System.out.println("1 - Jogos");
-                System.out.println("2 - Campeonato");
-                System.out.println("3 - Sair");
+                System.out.println("1 - Times");
+                System.out.println("2 - Jogos");
+                System.out.println("3 - Campeonato");
+                System.out.println("4 - Sair");
                 System.out.print("Escolha uma opção: ");
                 op = scan.nextInt();
                 scan.nextLine();
+                TimeView tv = new TimeView();
 
                 switch (op) {
                     case 1:
+                        tv.exibirMenu();
+                    case 2:
                         JogoView.menuJogos();
                         break;
-                    case 2:
+                    case 3:
                         CampeonatoView.menuCampeonatos();
                         break;
-                    case 3:
+                    case 4:
                         menu = false;
                         System.out.println("Saindo do sistema...");
                         break;

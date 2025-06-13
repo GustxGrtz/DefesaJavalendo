@@ -55,17 +55,6 @@ public class Time extends EntidadeBase implements Serializable{
         System.out.println("Nome do time: " + getNomeTime() + "Time: " + getNome() + " | Vitórias: " + vitorias + " | Derrotas: " + derrotas);
     }
 
-    @Override
-    public String toString() {
-    return "Time{" +
-            "nomeTime='" + nomeTime + '\'' +
-            ", nome='" + getNome() + '\'' +
-            ", vitorias=" + vitorias +
-            ", derrotas=" + derrotas +
-            ", jogadores=" + jogadores +
-            '}';
-}
-
 }
 //exemplo para deixar mais fácil de entender o puxe:
 //Time t = new Time(1, "Furacão das galaxias");
@@ -75,4 +64,3 @@ public class Time extends EntidadeBase implements Serializable{
 //List<String> lista = t.getJogadores();
 
 //System.out.println(lista);
-

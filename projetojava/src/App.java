@@ -1,3 +1,4 @@
+import Controller.Serializador;
 import View.MenuView;
 
 public class App {
@@ -14,14 +15,10 @@ public class App {
         
         // //testes de serialização
 
-        // //escreve direto da serialização
-        // Object[] times = Serializador.carregarObjeto("times.ser", 4);
-        // for (Object obj : times) {
-        //     System.out.println(obj);
-
-        // //puxa o normal criado na main
-        // // System.out.println(t1);
-        // // System.out.println(t2);
-
+    // //escreve direto da serialização
+    Object[] times = Serializador.carregarObjeto("times.ser", 10);
+    for (Object obj : times) {
+        System.out.println(obj);
+    }
     }
 }
