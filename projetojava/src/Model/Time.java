@@ -17,7 +17,7 @@ public class Time extends EntidadeBase implements Serializable{
         this.derrotas = 0;
         this.nomeTime = nomeTime;
     }
-
+        //nome dos jogado
     public void adicionarJogador(String jogador) {
         jogadores.add(jogador);
     }

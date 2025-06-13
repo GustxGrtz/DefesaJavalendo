@@ -15,7 +15,7 @@ public class TimeController {
         proximoId++;
     }
 
-    // Listar todos os times
+    // mostrar todos os times
     public List<Time> listar() {
         return times;
     }
@@ -30,7 +30,7 @@ public class TimeController {
         return null;
     }
 
-    // Editar o nome de um time
+    // Editar o nome do time
     public boolean editar(int id, String novoNome) {
         Time time = buscarPorId(id);
         if (time != null) {
@@ -40,7 +40,7 @@ public class TimeController {
         return false;
     }
 
-    // Remover um time
+    // Remover o time
     public boolean remover(int id) {
         for (int i = 0; i < times.size(); i++) {
             if (times.get(i).getId() == id) {
