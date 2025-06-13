@@ -78,7 +78,8 @@ public class TimeView {
             System.out.println("Nenhum time cadastrado.");
             return;
         }
-        for (Time t : times) {
+        for (int i = 0; i < times.size(); i++) {
+            Time t = times.get(i);
             t.exibirResumo();
         }
     }
@@ -113,3 +114,4 @@ public class TimeView {
         }
     }
 }
+//teste time view 
