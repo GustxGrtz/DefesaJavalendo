@@ -12,6 +12,12 @@ public class CampeonatoController {
     private List<Campeonato> campeonatos = new ArrayList<>();
     private Campeonato campeonato;
 
+    private final JogoController jogoController;
+
+    public CampeonatoController(JogoController jogoController) {
+        this.jogoController = jogoController;
+    }
+
     public void gerarChaveamento() {
         if (campeonato == null || campeonato.getTimes().isEmpty()) {
             throw new IllegalStateException("Nenhum campeonato ou times disponíveis.");
@@ -29,6 +35,7 @@ public class CampeonatoController {
         for (int i = 0; i < times.size(); i += 2) {
             Jogo jogo = new Jogo(times.get(i), times.get(i + 1), LocalDate.now());
             campeonato.adicionarJogo(jogo);
+            jogoController.adicionarJogo(jogo); // adiciona também ao controller compartilhado
         }
     }
 

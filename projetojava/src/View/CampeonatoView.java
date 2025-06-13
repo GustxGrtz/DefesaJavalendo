@@ -1,19 +1,20 @@
-// === VIEW - CampeonatoView.java com tratamento ===
+// === VIEW - CampeonatoView.java com controller compartilhado ===
 package View;
 
 import Controller.CampeonatoController;
-import Controller.JogoController;
-import Model.Jogo;
+import Model.Campeonato;
 import Model.Time;
-import java.time.LocalDate;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CampeonatoView {
 
-    private static CampeonatoController controller = new CampeonatoController();
-    private static JogoController jogoController = new JogoController();
+    private static CampeonatoController controller;
     private static Scanner scan = new Scanner(System.in);
+
+    public static void setController(CampeonatoController campeonatoController) {
+        controller = campeonatoController;
+    }
 
     public static void menuCampeonatos() {
         boolean menu = true;
@@ -53,18 +54,25 @@ public class CampeonatoView {
         try {
             System.out.print("Nome do Campeonato: ");
             String nomeCampeonato = scan.nextLine();
-            System.out.print("Nome do time da casa: ");
-            String nomeCasa = scan.nextLine();
-            System.out.print("Nome do time de fora: ");
-            String nomeFora = scan.nextLine();
 
-            Time timeCasa = new Time(0, nomeCasa, nomeCasa);
-            Time timeFora = new Time(0, nomeFora, nomeFora);
+            Campeonato campeonato = new Campeonato(nomeCampeonato);
+            controller.setCampeonato(campeonato);
+            controller.criarCampeonato(campeonato);
 
-            Jogo jogo = new Jogo(timeCasa, timeFora, LocalDate.now());
-            jogoController.adicionarJogo(jogo);
+            boolean adicionandoTimes = true;
+            while (adicionandoTimes) {
+                System.out.print("Nome do time (ou 'fim' para encerrar): ");
+                String nomeTime = scan.nextLine();
 
-            System.out.println("Jogo adicionado com sucesso!");
+                if (nomeTime.equalsIgnoreCase("fim")) {
+                    adicionandoTimes = false;
+                } else {
+                    Time time = new Time(0, nomeTime, nomeTime);
+                    campeonato.adicionarTime(time);
+                }
+            }
+
+            System.out.println("Campeonato '" + nomeCampeonato + "' criado com " + campeonato.getTimes().size() + " time(s)!");
         } catch (Exception e) {
             System.out.println("Erro ao criar campeonato: " + e.getMessage());
         }

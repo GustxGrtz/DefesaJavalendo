@@ -10,8 +10,12 @@ import java.util.Scanner;
 
 public class JogoView {
 
-    private static JogoController jogoController = new JogoController();
+    private static JogoController jogoController;
     private static Scanner scan = new Scanner(System.in);
+
+    public static void setController(JogoController controller) {
+        jogoController = controller;
+    }
 
     public static void menuJogos() {
         boolean menu = true;
