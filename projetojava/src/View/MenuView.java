@@ -1,4 +1,3 @@
-// === VIEW - MenuView.java com controllers compartilhados ===
 package View;
 
 import Controller.CampeonatoController;
@@ -16,11 +15,9 @@ public class MenuView {
         TimeView timeView = new TimeView();
         timeView.mostrarEstatisticasTime(); // chame o método
 
-        // Criar controllers compartilhados
         JogoController jogoController = new JogoController();
         CampeonatoController campeonatoController = new CampeonatoController(jogoController);
 
-        // Configurar controllers nas views
         JogoView.setController(jogoController);
         CampeonatoView.setController(campeonatoController);
 

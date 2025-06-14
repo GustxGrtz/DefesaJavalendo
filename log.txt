@@ -93,3 +93,8 @@
 2025-06-13T21:22:12.721219508 - Erro ao carregar lista de 'dados/jogos.txt': Model.EntidadeBase; local class incompatible: stream classdesc serialVersionUID = 1, local class serialVersionUID = -449271312579138457
 2025-06-13T21:23:03.371406383 - Lista salva com sucesso em: dados/jogos.txt
 2025-06-13T21:23:13.673085833 - Lista salva com sucesso em: dados/jogos.txt
+2025-06-13T21:31:24.807380446 - Lista salva com sucesso em: dados/jogos.txt
+2025-06-13T21:31:47.486438069 - Lista salva com sucesso em: dados/jogos.txt
+2025-06-13T21:32:12.869551264 - Lista salva com sucesso em: dados/jogos.txt
+2025-06-13T21:33:29.395680999 - Lista salva com sucesso em: dados/jogos.txt
+2025-06-13T21:34:23.778546124 - Lista salva com sucesso em: dados/jogos.txt

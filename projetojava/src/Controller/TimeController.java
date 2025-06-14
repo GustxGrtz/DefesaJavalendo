@@ -8,19 +8,16 @@ public class TimeController {
     private List<Time> times = new ArrayList<>();
     private int proximoId = 1;
 
-    // Criar um time com nome
     public void criar(String nome) {
         Time novoTime = new Time(proximoId, nome, nome); 
         times.add(novoTime);
         proximoId++;
     }
 
-    // mostrar todos os times
     public List<Time> listar() {
         return times;
     }
 
-    // Buscar time pelo ID
     public Time buscarPorId(int id) {
         for (int i = 0; i < times.size(); i++) {
             if (times.get(i).getId() == id) {
@@ -30,7 +27,6 @@ public class TimeController {
         return null;
     }
 
-    // Editar o nome do time
     public boolean editar(int id, String novoNome) {
         Time time = buscarPorId(id);
         if (time != null) {
@@ -40,7 +36,6 @@ public class TimeController {
         return false;
     }
 
-    // Remover o time
     public boolean remover(int id) {
         for (int i = 0; i < times.size(); i++) {
             if (times.get(i).getId() == id) {
