@@ -1,33 +1,41 @@
 package Controller;
 
 import Model.Log;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Serializador {
 
-public static void salvarObjeto(String caminho, Object[] objetos) {
-    try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(caminho))) {
-        for(Object o : objetos) os.writeObject(o);
-            Log.registrar("Objetos salvos com sucesso.");
-    } catch(Exception e) {
-            Log.registrar("Erro ao salvar objetos: " + e.getMessage());
-    }
-}
+    public static void salvarLista(String caminho, List<?> lista) {
+        try {
+            File file = new File(caminho);
+            File parent = file.getParentFile();
+            if (parent != null && !parent.exists()) {
+                parent.mkdirs();
+            }
 
-public static Object[] carregarObjeto(String caminho, int quantidade) {
-    try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(caminho))) {
-        Object[] objs = new Object[quantidade];
-        for (int i = 0; i < quantidade; i++) {
-            objs[i] = is.readObject();
+            try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(file))) {
+                os.writeObject(lista);
+                Log.registrar("Lista salva com sucesso em: " + caminho);
+            }
+        } catch (Exception e) {
+            Log.registrar("Erro ao salvar lista em '" + caminho + "': " + e.getMessage());
         }
-        Log.registrar("Objetos carregados com sucesso.");
-        return objs;
-    } catch(Exception e) {
-        Log.registrar("Erro ao carregar objetos: " + e.getMessage());
-            return new Object[0];
+    }
+
+    public static <T> List<T> carregarLista(String caminho) {
+        File file = new File(caminho);
+        if (!file.exists()) {
+            Log.registrar("Arquivo não encontrado: " + caminho);
+            return new ArrayList<>();
+        }
+
+        try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(file))) {
+            return (List<T>) is.readObject();
+        } catch (Exception e) {
+            Log.registrar("Erro ao carregar lista de '" + caminho + "': " + e.getMessage());
+            return new ArrayList<>();
         }
     }
 }

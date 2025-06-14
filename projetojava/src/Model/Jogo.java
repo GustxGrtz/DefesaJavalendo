@@ -1,14 +1,18 @@
 package Model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Jogo extends EntidadeBase {
+public class Jogo extends EntidadeBase implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private Time timeCasa;
     private Time timeFora;
     private int golsCasa;
     private int golsFora;
     private LocalDate data;
+
+    // ... restante da classe permanece igual
 
     // Construtor manual
     public Jogo(int id, String nome) {

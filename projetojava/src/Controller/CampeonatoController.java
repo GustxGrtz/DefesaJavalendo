@@ -76,4 +76,5 @@ public class CampeonatoController {
     public List<Campeonato> listarCampeonatos() {
         return campeonatos;
     }
+
 }

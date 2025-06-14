@@ -13,6 +13,9 @@ public class MenuView {
         Scanner scan = new Scanner(System.in);
         int op = 0;
 
+        TimeView timeView = new TimeView();
+        timeView.mostrarEstatisticasTime(); // chame o método
+
         // Criar controllers compartilhados
         JogoController jogoController = new JogoController();
         CampeonatoController campeonatoController = new CampeonatoController(jogoController);
@@ -23,21 +26,21 @@ public class MenuView {
 
         do {
             try {
-                System.out.println("-------------------Menu--------------------");
+                System.out.println("---------------------------------------");
                 System.out.println("Bem vindo ao Gerenciador de Campeonatos");
                 System.out.println("Menu Principal");
                 System.out.println("1 - Times");
                 System.out.println("2 - Jogos");
                 System.out.println("3 - Campeonato");
                 System.out.println("4 - Sair");
+                System.out.println("5 - Ver Estatísticas de um Time");
                 System.out.print("Escolha uma opção: ");
                 op = scan.nextInt();
                 scan.nextLine();
-                TimeView tv = new TimeView();
 
                 switch (op) {
                     case 1:
-                        tv.exibirMenu();
+                        timeView.exibirMenu();
                     case 2:
                         JogoView.menuJogos();
                         break;
@@ -47,6 +50,9 @@ public class MenuView {
                     case 4:
                         menu = false;
                         System.out.println("Saindo do sistema...");
+                        break;
+                    case 5:
+                        timeView.mostrarEstatisticasTime();
                         break;
                     default:
                         System.out.println("Opção inválida. Tente novamente.");

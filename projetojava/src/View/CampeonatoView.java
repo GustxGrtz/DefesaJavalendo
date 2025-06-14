@@ -69,9 +69,11 @@ public class CampeonatoView {
                 } else {
                     Time time = new Time(0, nomeTime, nomeTime);
                     campeonato.adicionarTime(time);
+                    controller.setCampeonato(campeonato);
                 }
             }
 
+ //           controller.salvar();
             System.out.println("Campeonato '" + nomeCampeonato + "' criado com " + campeonato.getTimes().size() + " time(s)!");
         } catch (Exception e) {
             System.out.println("Erro ao criar campeonato: " + e.getMessage());
